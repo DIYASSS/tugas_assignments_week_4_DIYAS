@@ -1,0 +1,4 @@
+Ini adalah file CV
+1.GSP
+2.GSM
+3.SSC
