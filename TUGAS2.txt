@@ -1,0 +1,321 @@
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic (master)
+$ mkdir diyas
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic (master)
+$ cd diyas
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ touch README.md
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git add .
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ dir
+README.md
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ echo Halo perkenalkan aku halaman utama >README.md
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git add .
+warning: LF will be replaced by CRLF in diyas/README.md.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ cat README.md
+Halo perkenalkan aku halaman utama
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.md
+
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git commit -m "First commit"
+[master e1abb29] First commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 diyas/README.md
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ cat README.md
+Hello World
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git checkout
+M       diyas/README.md
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git checkout README.md
+Updated 1 path from the index
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ cat README.md
+Halo perkenalkan aku halaman utama
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git branch cv
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git branch
+  cv
+* master
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git checkout cv
+Switched to branch 'cv'
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git branch
+* cv
+  master
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ touch cv.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ echo Ini adalah file CV >cv.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ cat cv.txt
+Ini adalah file CV
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git status
+On branch cv
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        cv.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git add .
+warning: LF will be replaced by CRLF in diyas/cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git commit -m "Initial CV"
+[cv f877e5f] Initial CV
+ 1 file changed, 1 insertion(+)
+ create mode 100644 diyas/cv.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git add .
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git commit -m "GSP"
+On branch cv
+nothing to commit, working tree clean
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git add .
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ cat cv.txt
+Ini adalah file CV
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git commit -m "GSP"
+On branch cv
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   cv.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git add .
+warning: LF will be replaced by CRLF in diyas/cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ cat cv.txt
+Ini adalah file CV
+1.GSP
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git commit -m "GSM"
+[cv 15f7959] GSM
+ 1 file changed, 1 insertion(+)
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git add .
+warning: LF will be replaced by CRLF in diyas/cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git commit -m "SSC"
+[cv 59b2ddd] SSC
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git add .
+warning: LF will be replaced by CRLF in diyas/cv.txt.
+The file will have its original line endings in your working directory
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git checkout master
+error: Your local changes to the following files would be overwritten by checkout:
+        diyas/cv.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git commit -m "SSC"
+[cv b1d97df] SSC
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (cv)
+$ git checkout master
+Switched to branch 'master'
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git add .
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git commit -m "update master pertama"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git add .
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git log
+commit e1abb294c4672171f5bd690624b8e73fa8db61e9 (HEAD -> master)
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Thu Jul 7 11:41:05 2022 +0700
+
+    First commit
+
+commit b9a7dbd8956e86253304e8d5c20af5ab3911ba35
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Thu Jul 7 11:36:48 2022 +0700
+
+    removing first.txt
+
+commit 66628f9c962423d27e1d0a7b7964846ef3c3b99f
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Thu Jul 7 11:35:32 2022 +0700
+
+    adding second.txt
+
+commit 33f4c9867698e593d933633cd3da2aa560c7fe51
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Thu Jul 7 11:34:00 2022 +0700
+
+    adding first.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git log
+commit e1abb294c4672171f5bd690624b8e73fa8db61e9 (HEAD -> master)
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Thu Jul 7 11:41:05 2022 +0700
+
+    First commit
+
+commit b9a7dbd8956e86253304e8d5c20af5ab3911ba35
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Thu Jul 7 11:36:48 2022 +0700
+
+    removing first.txt
+
+commit 66628f9c962423d27e1d0a7b7964846ef3c3b99f
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Thu Jul 7 11:35:32 2022 +0700
+
+    adding second.txt
+
+commit 33f4c9867698e593d933633cd3da2aa560c7fe51
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Thu Jul 7 11:34:00 2022 +0700
+
+    adding first.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git commit -m "update master pertama"
+[master dffd9d4] update master pertama
+ 1 file changed, 2 insertions(+)
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git add .
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git log
+commit dffd9d426b76eaa59402d2fd87ee914da5ae3701 (HEAD -> master)
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Thu Jul 7 11:54:22 2022 +0700
+
+    update master pertama
+
+commit e1abb294c4672171f5bd690624b8e73fa8db61e9
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Thu Jul 7 11:41:05 2022 +0700
+
+    First commit
+
+commit b9a7dbd8956e86253304e8d5c20af5ab3911ba35
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Thu Jul 7 11:36:48 2022 +0700
+
+    removing first.txt
+
+commit 66628f9c962423d27e1d0a7b7964846ef3c3b99f
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Thu Jul 7 11:35:32 2022 +0700
+
+    adding second.txt
+
+commit 33f4c9867698e593d933633cd3da2aa560c7fe51
+Author: diyasss <diyassaputra66@gmail.com>
+Date:   Thu Jul 7 11:34:00 2022 +0700
+
+    adding first.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git checkout master
+Already on 'master'
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ git merge cv
+Merge made by the 'ort' strategy.
+ diyas/cv.txt | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 diyas/cv.txt
+
+TKJ@DESKTOP-281Q94M MINGW64 ~/git-basic/diyas (master)
+$ dir
+cv.txt  README.md
